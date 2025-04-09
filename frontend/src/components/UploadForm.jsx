@@ -37,7 +37,7 @@ function UploadForm() {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.post("http://localhost:4000/pdf/upload", formData, {
+      await axios.post("https://matibabu-backend.onrender.com/pdf/upload", formData, {
         headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${token}` },
       });
       alert("Uploaded Successfully!");
@@ -85,7 +85,7 @@ function UploadForm() {
                   <td>{data.email}</td>
                   <td>{data.phone}</td>
                   <td>
-                    <a href={`http://localhost:4000/files/${data.pdf}`} target="_blank" rel="noopener noreferrer">View Report</a>
+                    <a href={`https://matibabu-backend.onrender.com/files/${data.pdf}`} target="_blank" rel="noopener noreferrer">View Report</a>
                   </td>
                 </tr>
               ))}
