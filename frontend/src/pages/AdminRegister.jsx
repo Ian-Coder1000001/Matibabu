@@ -20,7 +20,7 @@ function AdminRegister() {
     }
 
     try {
-      await axios.post("http://localhost:4000/auth/admin-register", { name, email, password });
+      await axios.post("https://matibabu-backend.onrender.com/auth/admin-register", { name, email, password });
       alert("Admin registration successful! Please login.");
       navigate("/admin-login");
     } catch (error) {
