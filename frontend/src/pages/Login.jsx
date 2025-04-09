@@ -13,7 +13,7 @@ function Login() {
     setError("");
     
     try {
-      const res = await axios.post("http://localhost:4000/auth/login", { email, password });
+      const res = await axios.post("https://matibabu-backend.onrender.com/auth/login", { email, password });
       
       if (res.data && res.data.token) {
         localStorage.setItem("token", res.data.token);
