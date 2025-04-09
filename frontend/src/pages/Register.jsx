@@ -15,7 +15,7 @@ function Register() {
     setError("");
 
     try {
-      await axios.post("http://localhost:4000/auth/register", { name, email, password });
+      await axios.post("https://matibabu-backend.onrender.com/auth/register", { name, email, password });
       alert("Registration successful! Please login.");
       navigate("/login");
     } catch (error) {
