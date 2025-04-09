@@ -12,7 +12,7 @@ const app = express();
 
 // ✅ Fix CORS issue: Allow frontend requests
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://matibabu-frontend.onrender.com",
   credentials: true, // Allow cookies and authorization headers
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
