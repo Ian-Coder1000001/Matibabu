@@ -16,7 +16,7 @@ function UploadForm() {
   const fetchReports = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await axios.get("http://localhost:4000/pdf/user", {
+      const res = await axios.get("https://matibabu-backend.onrender.com/pdf/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAllReports(res.data.data);
