@@ -1,3 +1,4 @@
 .env
 resetAdminPassword.js
 check-admin.js
+node modules
