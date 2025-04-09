@@ -43,7 +43,7 @@ function Admin() {
   const fetchReports = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:4000/pdf/admin/reports", {
+      const res = await axios.get("https://matibabu-backend.onrender.com/pdf/admin/reports", {
         headers: { Authorization: `Bearer ${token}` },
       });
       
@@ -121,7 +121,7 @@ function Admin() {
                           <td>{data.phone}</td>
                           <td>
                             {data.pdf && (
-                              <a href={`http://localhost:4000/files/${data.pdf}`} target="_blank" rel="noopener noreferrer">
+                              <a href={`https://matibabu-backend.onrender.com/files/${data.pdf}`} target="_blank" rel="noopener noreferrer">
                                 View Report
                               </a>
                             )}
