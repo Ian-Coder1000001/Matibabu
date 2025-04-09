@@ -19,7 +19,7 @@ function AdminLogin() {
     }
 
     try {
-      const res = await axios.post("http://localhost:4000/auth/admin-login", { email, password });
+      const res = await axios.post("https://matibabu-backend.onrender.com/auth/admin-login", { email, password });
 
       if (res.data && res.data.token) {
         localStorage.setItem("token", res.data.token);
